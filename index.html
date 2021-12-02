@@ -1,1 +1,114 @@
-Hello, World! 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Setup, Text, Lists</title>
+  </head>
+  <body>
+    <header>
+      <h1>Setup, Text, and Lists for HTML</h1>
+      <nav>
+        <a href = "#hello">Greetings</a>
+        <a href = "#setup">Setup</a>
+        <a href = "#Text">Text</a>
+        <a href = "#Lists">Lists</a>
+      </nav>
+    </header>
+    <main>
+      <h2 id = "hello">Greetings</h2>
+      <p>Hello and welcome to my site on coding basic HTML 5. In this tutorial
+      I will cover how to setup a HTML document, and how to use lists, images,
+      links, embedded media, tables, and forms.</p>
+      <h2 id = "setup">Setup</h2>
+      <p> The core of HTML documents are <em>elements</em>
+      and <em>Attributes</em>.
+      Element and attribute values are setup as followed:</p>
+      <p>&ltelementName <em>&lt-This is the opening tag</em> attribute1 = 
+      attributeValue>content&lt/elementName <em>&lt- This is the closing
+      tag</em>></p>
+      <p>Note that some elements like <code>img</code> do use a closing tag.
+      </p>
+      <p>To start a basic HTML 5 document, you must write 
+      the follwoing lines of code:</p>
+      <p>&lt!DOCTYPE html></p>
+      <p>&lthtml&gt <em>&lt- This element is the root element, it is
+      the start of the code.</em></p>
+      <p style = "text-indent:20px">  &lthead> <em>&lt- This element is where 
+      code that controls the display is stored.</em></p>
+      <p style = "text-indent:40px">    &ltmeta charset=”utf-8”> <em>&lt- This
+      controls the encoding.</em></p>
+      <p style = "text-indent:40px">    &lttitle>&lt/title> <em>&lt- This sets
+      the title.</em></p>
+      <p style = "text-indent:20px">  &lt/head></p>
+      <p style = "text-indent:20px">  &ltbody> <em>&lt- This is where the stuff
+      that will be displayed on screen is placed.</em></p>
+      <p style = "text-indent:20px">  &lt/body></p>
+      <p>&lt/html></p>
+      <p>Notice that each nested element is indented with two spaces of each
+      nest level.</p>
+      <h2 id = "Text">Text</h2>
+      <p>Some basic HTML text elements are the section <code>heading</code> 
+      (<code>&lth1>-&lth6></code>), <code>paragragh</code>
+      (<code>&ltp>&lt/p></code>), <code>emphasis</code>
+      (<code>&ltem>&lt/em</code>), and <code>code</code>
+      (<code>&ltcode>&lt/code</code>) elements.</p>
+      <p>Each section heading element decreases in size as the number 
+      increases. Here is what each section heading looks like.</p>
+      <h1>h1</h1>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <h4>h4</h4>
+      <h5>h5</h5>
+      <h6>h6</h6>
+      <p>The paragragh element is where you put paragraphs and lines of 
+      text. <code>&ltdiv>&lt/div></code> and <code>&ltbr></code> are
+      elements that break lines into new lines like this:<br> The <code>
+      emphasis</code> and <code>code</code> elements alter the look of 
+      contained words. Emphasis looks like <em>this</em> and code looks like
+      <code>this</code>.</p>
+      <h2 id = "Lists">Lists</h2>
+      <p>There are three basic lists in HTML, unordered lists, ordered lists,
+      and description lists. Unordered lists are built and appear like this:</p>
+      <h3>Code</h3>
+      <p>&ltul><p>
+      <p style = "text-indent:20px">  &ltli>content-A&lt/li></p>
+      <p style = "text-indent:20px">  &ltli>content-B&lt/li></p>
+      <p>&lt/ul></p>
+      <h3>Appearance</h3>
+      <ul>
+        <li>content-A</li>
+        <li>content-B</li>
+      </ul>
+      <p>Ordered lists are built and appear like this:</p>
+      <h3>Code</h3>
+      <p>&ltol><p>
+      <p style = "text-indent:20px">  &ltli>content-A&lt/li></p>
+      <p style = "text-indent:20px">  &ltli>content-B&lt/li></p>
+      <p>&lt/ol></p>
+      <h3>Appearance</h3>
+      <ol>
+        <li>content-A</li>
+        <li>content-B</li>
+      </ol>
+      <p>Description lists are composed of names and values, they are
+      built and appear like this:</p>
+      <h3>Code</h3>
+      <p>&ltdl><p>
+      <p style = "text-indent:20px">  &ltdt>content-A&lt/dt></p>
+      <p style = "text-indent:40px">  &ltdd>content-B&lt/dd></p>
+      <p>&lt/dl></p>
+      <h3>Appearance</h3>
+      <dl>
+        <dt>content-A</dt>
+        <dd>content-B</dd>
+      </dl>
+    </main>
+    <footer>
+      <nav>
+        <a href = "Images,links,embedded-media.html">
+        Images,links,embedded-media</a>
+        <a href = "Tables,forms.html">Tables,forms</a>
+      </nav>
+    </footer>
+  </body>
+</html>
