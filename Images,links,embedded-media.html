@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Links,Images,Embedded Media</title>
+    <link href= 'styles/color.css' rel='stylesheet'>
+    <link href= 'styles/formatting.css' rel='stylesheet'>
+    <link href= 'styles/transitions-animations.css' rel='stylesheet'>
+  </head>
+  <body>
+    <header>
+      <h1>Images, Links, and Embedded Media</h1>
+      <nav>
+        <a href = "#images">Images</a>
+        <a href = "#links">Links</a>
+        <a href = "#media">Embedded Media</a>
+      </nav>
+    </header>
+    <main>
+      <h2 id = "images">Images</h2>
+      <p>The <code>&ltimg></code> element is an open element
+      (requires no <code>&lt/img</code>> tag) that displays an img. There 
+      are several attributes that affect images. Here is a image that 
+      responds to the size of the viewers screen:</p>
+      <p>&ltimg <em>&lt- The image element</em></p> 
+      <p>src = "images/responsive/xs-box-500.png" <em>&lt- this is the default
+      image shown. I will explain links in greater detail.</em></p> 
+      <p>alt = "Boxes" <em>&lt- Provides the name and other information
+      of image.</em></p>
+      <p>srcset <em>&lt- <code>srcset</code> specifies special displays for
+      different situations.</em>   = "images/responsive/xl-box-3000.png 3000w,
+      <em>&lt- This is the minimum width, in pixles, that this image can be
+      shown. </em></p>
+      <p style = "text-indent:20px">images/responsive/xs-box-2000.png 2000w,
+      </p>
+      <p style = "text-indent:20px">images/responsive/m-box-1500.png 1500w,</p>
+      <p style = "text-indent:20px">images/responsive/s-box-1000.png" 1000w,
+      </p>
+      <p style = "text-indent:20px">sizes = "50vw" <em>&lt- This is the
+      precentage of the field of view that will be used.</em></p>
+      <p>This code will show the following:</p>    
+      <img 
+      class = "rimage"
+      src = "images/responsive/xs-box-500.png" 
+      alt = "Boxes"
+      srcset = "images/responsive/xl-box-3000.png 3000px,
+        images/responsive/xs-box-2000.png 2000px,
+        images/responsive/m-box-1500.png 1500px,
+        images/responsive/s-box-1000.png 1000px
+        sizes = "50vw">
+      <p>The <code>picture</code> element is another way to have your
+      images respond to the user's screen. here is a sample code:
+      <p>&ltpicture><p>
+        <p style = "text-indent:20px">&ltsource media = "(min-width: 800px)"
+        <em>&lt-The <code>source</code> element creates media condions. 
+        Media creates screen conditions for the image to render.</em> srcset =
+        "images/cats/kitten-large-650.png"></p>
+        <p style = "text-indent:20px">&ltsource media = "(min-width: 600px)"
+        srcset = "images/cats/kitten-medium-465.png"></p>
+        <p style = "text-indent:20px">&ltimg src =
+        "images/cats/kitten-small-330.png" alt = "Kitten">
+        <em>&lt- This is the default image shown if the others cannot 
+        be rendered.</em></p>
+      <p>&lt/picture></p>
+      <p>Here is what the code above would look like:</p>
+      <picture>
+        <source media = "(min-width: 800px)" srcset = "images/cats/kitten-large-650.png">
+        <source media = "(min-width: 600px)" srcset = "images/cats/kitten-medium-465.png">
+        <img src = "images/cats/kitten-small-330.png" alt = "Kitten">
+      </picture>
+      <h2 id = "links">Links</h2>
+      <p> You have already seen links in this page. I will now go deeper into 
+      links. To link to a external website, simply post the URL into the 
+      attribute. Here I use the <code>anchor</code> element with a <code>href</code>
+      attribute to link to another website</p>
+      <p>&lta href = "https://images.unsplash.com/photo-1497384401032-2182d268
+      7715?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1
+      &auto=format&fit=crop&w=1050&q=80">link&lt/a></p>
+      <p>The code above will show this:</p>
+      <a href ="https://images.unsplash.com/photo-1497384401032-2182d2687715?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">link</a>
+      <p>to link internally, use / to go down a file . to move up a file. 
+      For example if we look back to the line "images/responsive/xs-box-1000.
+      png" we can see that the link first goes to images and then uses a / to
+      enter the images folder, and then selects the
+      "images/responsive/xs-box-1000.png" image.</p>
+      <h2 id = "media">Embedded Media</h2>
+      <p>For embedded media, we will look at how to embedd </code>audio
+      and <code>video</code> into your website. Lets start with the
+      <code>audio</code> element.</p>
+      <p>&ltaudio controls <em>&lt-<code>controls</code> gives the user basic
+       audio controls.</em> ></p>
+        <p style = "text-indent:20px">&ltsource src = "audio
+        /alligator.mp3" <em>&lt-This links to the audio file to display.</em>
+        type = "audio/mp3" <em>&lt- This tells the website the type of audio 
+        to use.</em>></p>
+        <p style = "text-indent:20px">Sorry, your browser does not support this
+        audio type. <em>&lt- This is for the event that the user cannot 
+        use the audio file.</em></p>
+      <p>&lt/audio></p>
+      <p>This code will display the following:</p>
+      <audio controls>
+        <source src = "audio/alligator.mp3" type = "audio/mp3">
+        Sorry, your browser does not support this audio type
+      </audio>
+      <p>Next up we have the <code>video</code> element. here is a sample 
+      of the <code>video</code> element.</p>
+      <p>&ltvideo controls width = "300"> <em>&lt- <code>controls</code> is
+      used once again. I also have added a <code>width</code> attribute to 
+      set how big the video is, in pixles.</em></p>
+        <p style = "text-indent:20px">&ltsource src = "videos/giraffe.webm"
+        type = "video/webm"></p>
+        <p style = "text-indent:20px">&ltsource src = "videos/giraffe.mp4"
+        type = "video/mp4"> <em>&lt- I have added another type of video if 
+       mp4 is not suported.</em></p>
+        <p style = "text-indent:20px">Sorry, your browser does not support
+        embedded videos.</p>
+      <p>&lt/video></p>
+      <p> The code above will display this:</p>
+      <video controls width = "300">
+        <source src = "videos/giraffe.webm" type = "video/webm">
+        <source src = "videos/giraffe.mp4" type = "video/mp4">
+        Sorry, your browser does not support embedded videos.
+      </video>
+    </main>
+    <footer>
+      <nav>
+        <a href = "index.html">Setup,text,lists</a>
+        <a href = "Tables,forms.html">Tables,forms</a>
+      </nav>
+    </footer>
+  </body>
+</html>

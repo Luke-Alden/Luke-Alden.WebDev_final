@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Setup, Text, Lists</title>
+    <link href= 'styles/color.css' rel='stylesheet'>
+    <link href= 'styles/formatting.css' rel='stylesheet'>
+    <link href= 'styles/transitions-animations.css' rel='stylesheet'>
   </head>
   <body>
     <header>
@@ -20,12 +23,12 @@
       I will cover how to setup a HTML document, and how to use lists, images,
       links, embedded media, tables, and forms.</p>
       <h2 id = "setup">Setup</h2>
-      <p> The core of HTML documents are <em>elements</em>
-      and <em>Attributes</em>.
+      <p> The core of HTML documents are <em id = "se">elements</em>
+      and <em id = "se">Attributes</em>.
       Element and attribute values are setup as followed:</p>
       <p>&ltelementName <em>&lt-This is the opening tag</em> attribute1 = 
       attributeValue>content&lt/elementName <em>&lt- This is the closing
-      tag</em>></p>
+      tag</em></p>
       <p>Note that some elements like <code>img</code> do use a closing tag.
       </p>
       <p>To start a basic HTML 5 document, you must write 
@@ -40,7 +43,7 @@
       <p style = "text-indent:40px">    &lttitle>&lt/title> <em>&lt- This sets
       the title.</em></p>
       <p style = "text-indent:20px">  &lt/head></p>
-      <p style = "text-indent:20px">  &ltbody> <em>&lt- This is where the stuff
+      <p style = "text-indent:20px">  &ltbody> <em>&lt- This is where the code
       that will be displayed on screen is placed.</em></p>
       <p style = "text-indent:20px">  &lt/body></p>
       <p>&lt/html></p>
@@ -64,11 +67,12 @@
       text. <code>&ltdiv>&lt/div></code> and <code>&ltbr></code> are
       elements that break lines into new lines like this:<br> The <code>
       emphasis</code> and <code>code</code> elements alter the look of 
-      contained words. Emphasis looks like <em>this</em> and code looks like
-      <code>this</code>.</p>
+      contained words. Emphasis looks like <em id = "se">this</em> and 
+      code looks like <code>this</code>.</p>
       <h2 id = "Lists">Lists</h2>
       <p>There are three basic lists in HTML, unordered lists, ordered lists,
-      and description lists. Unordered lists are built and appear like this:</p>
+      and description lists. Unordered lists are built and appear like this:
+      </p>
       <h3>Code</h3>
       <p>&ltul><p>
       <p style = "text-indent:20px">  &ltli>content-A&lt/li></p>
@@ -105,9 +109,9 @@
     </main>
     <footer>
       <nav>
-        <a href = "Images-links-embedded-media.html">
+        <a href = "Images,links,embedded-media.html">
         Images,links,embedded-media</a>
-        <a href = "Tables-forms.html">Tables,forms</a>
+        <a href = "Tables,forms.html">Tables,forms</a>
       </nav>
     </footer>
   </body>
