@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tables and Forms</title>
+    <link href= 'styles/color.css' rel='stylesheet'>
+    <link href= 'styles/formatting.css' rel='stylesheet'>
+    <link href= 'styles/transitions-animations.css' rel='stylesheet'>
+  </head>
+  <body class = "span-t">
+    <header class = "ht">
+      <h1>Tables and Forms</h1>
+      <nav>
+        <a href = "#tables">Tables</a>
+        <a href = "#forms">Forms</a>
+      </nav>
+    </header>
+    <main class = "mt">
+      <h2 id = "tables">Tables</h2>
+      <p>To start out add this CSS to the <code>head</code> element:
+      <code>&ltstyle>td, th{border: 1px solid gray;}&lt/style></code>.
+      You'll learn how this works later but it will make your tables 
+      easier to read.</p>
+      <p>The <code>&lttable>&lt/table></code> element sets up a table of 
+      rows and columns. A basic table is set up like this:</p>
+      <p>&lttable></p>
+        <p style = "text-indent:20px">&ltcaption>Title&lt/caption> <em>&lt- 
+        The <code>caption</code> element is where the table title is placed.
+        </em></p>
+        <p style = "text-indent:20px">&ltthead> <em>&lt- This is where the top
+        row of the table goes.</em></p>
+          <p style = "text-indent:40px">&lttr> <em>&lt- This creates one row
+          of the table.</em></p>
+            <p style = "text-indent:60px">&ltth> Row1,Column1&lt/th> <em>&lt-
+            The <code>th</code> element crates one column and bolds the 
+            content.</em></p>
+            <p style = "text-indent:60px">&ltth>Row1,Column2&lt/th></p>
+          <p style = "text-indent:40px">&lt/tr></p>
+        <p style = "text-indent:20px">&lt/thead></p>
+        <p style = "text-indent:20px">&lttbody> <em>&lt- This is where the 
+        body of the table goes.</em></p>
+          <p style = "text-indent:40px">&lttr></p>
+            <p style = "text-indent:60px">&lttd>Row2,Column1&lt/td> <em>&lt- 
+            The <code>td</code> element also creates a column.</em></p>
+            <p style = "text-indent:60px">&lttd>Row2,Column2&lt/td></p>
+          <p style = "text-indent:40px">&lt/tr></p>
+      <p style = "text-indent:20px">&lt/tbody></p>
+    <p>&lt/table></p>
+    <table>
+      <caption>Title</caption>
+      <thead>
+        <tr>
+          <th>Row1,Column1</th>
+          <th>Row1,Column2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row2,Column1</td>
+          <td>Row2,Column2</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>&lttable></p>
+    <p>Two attributes that are used with the <code>&lttable></code> element 
+    are <code>rowspan</code> and <code>colspan</code>. The <code>rowspan</code>
+    and <code>colspan</code> attributes control the span of the row and column
+    respectively. This example:</p>
+    <p>&lttable></p>
+        <p style = "text-indent:20px">&ltcaption>Title&lt/caption></p>
+        <p style = "text-indent:20px">&ltthead></p>
+          <p style = "text-indent:40px">&lttr></p>
+            <p style = "text-indent:60px">&ltth> Row1,Column1&lt/th></p>
+            <p style = "text-indent:60px">&ltth colspan = "2">Row1,Column2,3
+            &lt/th></p>
+          <p style = "text-indent:40px">&lt/tr></p>
+        <p style = "text-indent:20px">&lt/thead></p>
+        <p style = "text-indent:20px">&lttbody></p>
+          <p style = "text-indent:40px">&lttr></p>
+            <p style = "text-indent:60px">&lttd rowspan = "2">Row2,3,Column1
+            &lt/td></p>
+            <p style = "text-indent:60px">&lttd>Row2,Column2&lt/td></p>
+            <p style = "text-indent:60px">&lttd>Row2,Column3&lt/td></p>
+          <p style = "text-indent:40px">&lt/tr></p>
+          <p style = "text-indent:40px">&lttr></p>
+            <p style = "text-indent:60px">&lttd>Row3,Column1&lt/td></p>
+            <p style = "text-indent:60px">&lttd>Row3,Column2&lt/td></p>
+            <p style = "text-indent:60px">&lttd>Row2,Column3&lt/td></p>
+          <p style = "text-indent:40px">&lt/tr></p>
+      <p style = "text-indent:20px">&lt/tbody></p>
+    <p>&lt/table></p>
+    <p>will show this:</p>
+    <table>
+      <caption>Title</caption>
+        <thead>
+          <tr>
+            <th class = "tho">Row1,Column1</th>
+            <th colspan = "2" class = "tht">Row1,Column2,3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan = "2" class = "tdo">Row2,3,Column1</td>
+            <td class = "tdt">Row2,Column2</td>
+            <td class = "tdth">Row2,Column3</td>
+          </tr>
+          <tr>
+            <td class = "tdf">Row3,Column1</td>
+            <td class = "tdfi">Row3,Column2</td>
+          </tr>
+        </tbody>
+    </table>
+    <h2 id = "forms">Forms</h2>
+    <p>There are many occasions in a website where you will need user input.
+    To create a baisc form, will use the <code>form</code> element. Below is a
+    sample of what a basic form looks like in code. Notice that I have added in
+    a <code>fieldset</code> element to improve the look. I have also added
+    <code>div</code>,<code>br</code> and a <code>legend</code> element to
+    further improve the render.</p>
+    <p>&ltform action = "/api/user" <em>&lt- This attribute declare where the
+    info will be sent.</em> method = "POST"></p>
+      <p style = "text-indent:20px">&ltfieldset> <em>&lt- This creates a "box"
+        around the contained code.</em></p>
+        <p style = "text-indent:40px">&ltlegend>Insert Data&lt/legend> <em>&lt-
+        This is where the title for <code>fieldset</code> is placed.</em></p>
+        <p style = "text-indent:40px">&ltdiv> <em>&lt- This creates a 
+        line break at the end of the content.</em></p>
+        <p style = "text-indent:40px">&ltlabel>First Name:&lt/label> <em>&lt-
+        This is where the label for the corresponding <code>input</code>
+        element is.</em></p>
+        <p style = "text-indent:40px">&ltbr></p>
+        <p style = "text-indent:40px">&ltinput type = "text" <em>&lt- This
+        declares the type of input. name = "first_name" id = "first_name">
+        </em></p>
+        <p style = "text-indent:40px">&lt/div></p>
+        <p style = "text-indent:40px">&ltdiv></p>
+        <p style = "text-indent:40px">&ltlabel>Last Name:</label></p>
+        <p style = "text-indent:40px">&ltbr></p>
+        <p style = "text-indent:40px">&ltinput type = "text" name = "last_name"
+        id = "last_name"></p>
+        <p style = "text-indent:40px">&lt/div></p>
+        <p style = "text-indent:40px">&ltdiv></p>
+        <p style = "text-indent:40px">&ltlabel>Email:&lt/label></p>
+        <p style = "text-indent:40px">&ltbr></p>
+        <p style = "text-indent:40px">&ltinput type = "email" <em>&lt- The 
+        email value demands the user enter a valid email.</em> name = "email"
+        id = "emailfield"></p>
+        <p style = "text-indent:40px">&lt/div></p>
+        <p style = "text-indent:40px">&ltdiv></p>
+        <p style = "text-indent:40px">&ltlabel>Password:&lt/label></p>
+        <p style = "text-indent:40px">&ltbr></p>
+        <p style = "text-indent:40px">&ltinput type = "password" name = 
+        "password" id = "password" minlength = "7"> <em>&lt- This attribute
+        (along with <code>maxlength</code>) sets restrictions on the input.
+        </em></p>
+        <p style = "text-indent:40px">&lt/div></p>
+        <p style = "text-indent:40px">&ltdiv></p>
+        <p style = "text-indent:40px">&ltlabel>Bio:&lt/label></p>
+        <p style = "text-indent:40px">&ltbr></p>
+        <p style = "text-indent:40px">&lttextarea <em>&lt- This element makes a
+        text box, the size is declared with the <code>rows</code> and 
+        <code>cols</code> attribute.</em> id = "biofield" name = "bio"
+        rows = "4" cols = "25">&lt/textarea></p>
+        <p style = "text-indent:40px">&lt/div></p>
+        <p style = "text-indent:40px">&ltdiv></p>
+        <p style = "text-indent:40px">&ltinput type = "submit" value = "submit"></p>
+        <p style = "text-indent:40px">&lt/div></p>
+      <p style = "text-indent:20px">&lt/fieldset></p>
+    <p>&lt/form></p>
+    <p>Here is what the above code will show up as:</p>
+    <form action = "/api/user" method = "POST">
+      <fieldset>
+        <legend>Insert Data</legend>
+        <Div>
+        <label>First Name:</label>
+        <br>
+        <input type = "text" name = "first_name" id = "first_name">
+        </Div>
+        <Div>
+        <label>Last Name:</label>
+        <br>
+        <input type = "text" name = "last_name" id = "last_name">
+        </Div>
+        <Div>
+        <label>Email:</label>
+        <br>
+        <input type = "email" name = "email" id = "emailfield">
+        </Div>
+        <Div>
+        <label>Password:</label>
+        <br>
+        <input type = "password" name = "password" id = "password" minlength = "7">
+        </Div>
+        <Div>
+        <label>Bio:</label>
+        <br>
+        <textarea id = "biofield" name = "bio" rows = "4" cols = "25"></textarea>
+        </Div>
+        <Div>
+        <input type = "submit" value = "submit">
+        </Div>
+      </fieldset>
+    </form>
+    </main>
+    <footer class = "ft">
+      <nav>
+        <a href = "index.html">Setup,text,lists</a>
+        <a href = "Images,links,embedded-media.html">Images,links,embedded-media</a>
+      </nav>
+    </footer>
+  </body>
+</html>
