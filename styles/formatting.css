@@ -1,0 +1,52 @@
+td, th  {
+  border: 1px solid gray;
+}
+.ht > h1  {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  flex: 1 2 100%;
+}
+.ht > nav {
+  flex: 2 1 100%;
+}
+a:hover  {
+  font-size: 1.25em;
+}
+.span-t  {
+  display: grid;
+  grid-template-rows: repeat(3,0.01fr);
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "ht"
+    "mt"
+    "ft";
+}
+.ht  {
+  grid-area: ht;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.mt  {
+  grid-area: mt;  
+}
+.ft  {
+  grid-area: ft;
+}
+@media screen and (min-width: 1200px)  {
+  #rvideo  {
+    width: 1500px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1500px)  {
+  #rvideo  {
+    width: 500px;
+  }
+} 
+@media screen and (max-width: 500px)  {
+  #rvideo  {
+    width: 300px;
+  }
+}
