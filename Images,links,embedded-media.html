@@ -7,8 +7,8 @@
     <link href= 'styles/formatting.css' rel='stylesheet'>
     <link href= 'styles/transitions-animations.css' rel='stylesheet'>
   </head>
-  <body>
-    <header>
+  <body class = "span-t">
+    <header class = "ht">
       <h1>Images, Links, and Embedded Media</h1>
       <nav>
         <a href = "#images">Images</a>
@@ -16,7 +16,7 @@
         <a href = "#media">Embedded Media</a>
       </nav>
     </header>
-    <main>
+    <main class = "mt">
       <h2 id = "images">Images</h2>
       <p>The <code>&ltimg></code> element is an open element
       (requires no <code>&lt/img</code>> tag) that displays an img. There 
@@ -34,19 +34,17 @@
       <p style = "text-indent:20px">images/responsive/xs-box-2000.png 2000w,
       </p>
       <p style = "text-indent:20px">images/responsive/m-box-1500.png 1500w,</p>
-      <p style = "text-indent:20px">images/responsive/s-box-1000.png" 1000w,
+      <p style = "text-indent:20px">images/responsive/s-box-1000.png 1000w"
       </p>
       <p style = "text-indent:20px">sizes = "50vw" <em>&lt- This is the
       precentage of the field of view that will be used.</em></p>
       <p>This code will show the following:</p>    
       <img 
-      class = "rimage"
       src = "images/responsive/xs-box-500.png" 
-      alt = "Boxes"
-      srcset = "images/responsive/xl-box-3000.png 3000px,
-        images/responsive/xs-box-2000.png 2000px,
-        images/responsive/m-box-1500.png 1500px,
-        images/responsive/s-box-1000.png 1000px"
+      srcset = "images/responsive/xl-box-3000.png 3000w,
+        images/responsive/l-box-2000.png 2000w,
+        images/responsive/m-box-1500.png 1500w,
+        images/responsive/s-box-1000.png 1000w"
         sizes = "50vw">
       <p>The <code>picture</code> element is another way to have your
       images respond to the user's screen. here is a sample code:
@@ -104,9 +102,8 @@
       </audio>
       <p>Next up we have the <code>video</code> element. here is a sample 
       of the <code>video</code> element.</p>
-      <p>&ltvideo controls width = "300"> <em>&lt- <code>controls</code> is
-      used once again. I also have added a <code>width</code> attribute to 
-      set how big the video is, in pixles.</em></p>
+      <p>&ltvideo controls> <em>&lt- <code>controls</code> is
+      used once again. </em></p>
         <p style = "text-indent:20px">&ltsource src = "videos/giraffe.webm"
         type = "video/webm"></p>
         <p style = "text-indent:20px">&ltsource src = "videos/giraffe.mp4"
@@ -116,13 +113,13 @@
         embedded videos.</p>
       <p>&lt/video></p>
       <p> The code above will display this:</p>
-      <video controls width = "300">
+      <video controls id = "rvideo">
         <source src = "video/giraffe.webm" type = "video/webm">
         <source src = "video/giraffe.mp4" type = "video/mp4">
         Sorry, your browser does not support embedded videos.
       </video>
     </main>
-    <footer>
+    <footer class = "ft">
       <nav>
         <a href = "index.html">Setup,text,lists</a>
         <a href = "Tables,forms.html">Tables,forms</a>
